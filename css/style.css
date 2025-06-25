@@ -1,0 +1,221 @@
+body {
+    background: #0f1117;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    color: #fafafa;
+}
+
+.card {
+    background: #1a1d25;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+input,
+select {
+    width: 100%;
+    max-width: 250px;
+    background: #20242d;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: block;
+}
+
+button {
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* canvas {
+            width: 100% !important;
+            height: 400px !important;
+        } */
+.card canvas {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 2 / 1;
+    display: block;
+}
+
+.stat-box {
+    background: #22242b;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.legend-box {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+#current-day-title {
+    background: #2d3748;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.ml-1 {
+    margin-left: 1em;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.gap {
+    column-gap: 1em;
+}
+
+#plant-ranking-chart {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card canvas {
+        aspect-ratio: 1/1.5;
+    }
+
+    .m-row {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 600px) {
+    form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+}
+
+
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 1rem;
+  min-width: 300px;
+  border: 1px solid #ddd;
+}
+
+.responsive-table th,
+.responsive-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.responsive-table thead {
+  background-color: #1a1d25;
+  font-weight: bold;
+}
+.responsive-table .avg {
+    background-color: #08290f;
+}
+.responsive-table .min {
+    background-color: #080a29;
+}
+.responsive-table .max {
+    background-color: #29080b;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    .card {
+        margin: 1rem 0;
+        border-radius: 0;
+        padding: .5rem;
+    }
+    .responsive-table thead {
+        display: none;
+    }
+
+    .responsive-table, 
+    .responsive-table tbody, 
+    .responsive-table tr, 
+    .responsive-table td {
+        display: block;
+        border: 0;
+    }
+
+    .responsive-table tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+    }
+
+
+    .responsive-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .responsive-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        padding-right: 1rem;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .responsive-table td:last-child {
+        border-bottom: none;
+    }
+}
